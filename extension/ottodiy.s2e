@@ -24,12 +24,14 @@
 		
 		[
 			"w",
-			"Otto init :LegLeft Pin  %n LegRight Pin %n LeftFoot Pin %n RightFoot Pin %n Noise Sensor Pin A%n  BuzzerPin %n SRF04 Trig %n SRF04 Echo %n",
+			"Otto init :LegLeft Pin  %n LegRight Pin %n LeftFoot Pin %n RightFoot Pin %n LeftArm Pin %n RightArm Pin %n Noise Sensor Pin A%n  BuzzerPin %n SRF04 Trig %n SRF04 Echo %n",
 			"OttoInit",
 			"2",
 			"3",
 			"4",
 			"5",
+			"6",
+			"7",
 			"6",
 			"13",
 			"8",
@@ -59,17 +61,19 @@
 		],
 		[
 			"w",
-			"Set Calibrate Left Leg: %n Right Leg %n Left Foot %n Right Foot %n",
+			"Set Calibrate Left Leg: %n Right Leg %n Left Foot %n Right Foot %n Left Arm %n Right Arm %n",
 			"setTrim",
 			"0",
 			"0",
 			"0",
-			"0", 
+			"0",
+			"0",
+			"0",
 			{
 				"setup": "",
 				"inc": "#include <Servo.h>\n#include <EEPROM.h>\n #include \"Otto.h\"\n",
 				"def": "Otto Ottobot;\n",
-				"work": "Ottobot.setTrims({0},{1},{2},{3});\nOttobot.saveTrimsOnEEPROM();\n",
+				"work": "Ottobot.setTrims({0},{1},{2},{3},{4},{5});\nOttobot.saveTrimsOnEEPROM();\n",
 				"loop": ""
 			}
 		],
